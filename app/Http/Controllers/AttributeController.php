@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
-use Illuminate\Support\Collection;
-use PhpParser\ErrorHandler\Collecting;
+use App\Models\Attribute;
+use App\Http\Requests\StoreAttributeRequest;
+use App\Http\Requests\UpdateAttributeRequest;
 
-class CategoryController extends Controller
+class AttributeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): Collection
+    public function index()
     {
-        return Category::all();
+        //
     }
 
     /**
@@ -29,7 +27,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(StoreAttributeRequest $request)
     {
         //
     }
@@ -37,15 +35,15 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show(Attribute $attribute)
     {
-        return $category;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(Attribute $attribute)
     {
         //
     }
@@ -53,7 +51,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateAttributeRequest $request, Attribute $attribute)
     {
         //
     }
@@ -61,7 +59,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Attribute $attribute)
     {
         //
     }
