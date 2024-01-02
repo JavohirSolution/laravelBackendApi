@@ -20,11 +20,19 @@ class UserSeeder extends Seeder
             'last_name' => 'Adminovich',
             'email' => 'admin@ecom.uz',
             'phone' => '+998902299389',
-            'password' =>Hash::make('secret12'),
+            'password' => Hash::make('secret12'),
         ]);
 
         $admin->roles()->attach(1);
 
+        $admin = User::create([
+            'first_name' => 'Salom',
+            'last_name' => 'Salomovich',
+            'email' => 'Salom@ecom.uz',
+            'phone' => '+998902299390',
+            'password' => Hash::make('secret12'),
+        ]);
+        $admin->roles()->attach(3);
 
         User::factory()->count(10)->hasAttached(Role::find(2))->create();
     }

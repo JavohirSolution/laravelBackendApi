@@ -29,7 +29,7 @@ class FavoritesController extends Controller
     public function destroy($favorite_id)
     {
 
-        if (auth()->user()->($favorite_id)) {
+        if (auth()->user()->hasFavorites($favorite_id)) {
             auth()->user()->favorites()->detach($favorite_id);
 
             return response()->json([
