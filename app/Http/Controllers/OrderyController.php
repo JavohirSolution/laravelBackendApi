@@ -8,6 +8,10 @@ use App\Http\Requests\UpdateOrderyRequest;
 
 class OrderyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -29,7 +33,7 @@ class OrderyController extends Controller
      */
     public function store(StoreOrderyRequest $request)
     {
-        //
+        dd($request);
     }
 
     /**

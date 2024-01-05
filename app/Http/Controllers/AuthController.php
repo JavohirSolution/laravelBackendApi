@@ -11,7 +11,6 @@ use Illuminate\Validation\ValidationException as ValidationValidationException;
 
 class AuthController extends Controller
 {
-
     public function login(LoginRequest $request)
     {
         $user = User::where('email', $request->email)->first();

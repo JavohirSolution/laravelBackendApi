@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('delivery_methods', function (Blueprint $table) {
+        Schema::create('user_addresses', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('estimated_time');
-            $table->unsignedBigInteger('sum');
+            $table->foreignId('user_id')->constrained();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
+            $table->text('region');
+            $table->text('district');
+            $table->text('street');
+            $table->text('home');
             $table->timestamps();
         });
     }
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('delivery_methods');
+        Schema::dropIfExists('user_addresses');
     }
 };
