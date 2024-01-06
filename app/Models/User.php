@@ -64,5 +64,11 @@ class User extends Authenticatable
     public function addresses(): HasMany
     {
         return $this->hasMany(UserAddress::class);
+
+    }
+
+    public function orders():HasMany
+    {
+        return $this->hasMany(Ordery::class);
     }
 }

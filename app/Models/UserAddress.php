@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class UserAddress extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'user_id,',
         'latitude',
@@ -19,7 +20,7 @@ class UserAddress extends Model
         'home',
     ];
 
-    public function user():BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

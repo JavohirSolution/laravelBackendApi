@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::with('stocks')->find($id);
+        return Product::with('stocks')->findOrFail($id);
     }
 
     /**

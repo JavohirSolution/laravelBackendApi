@@ -20,8 +20,13 @@ class Ordery extends Model
         'address'
     ];
 
+    protected $casts = [
+        'products' => 'array',
+        'address' => 'array',
+    ];
 
-    public function user():BelongsTo
+
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

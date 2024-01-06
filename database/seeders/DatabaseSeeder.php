@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\DeliveryMethod;
 use App\Models\PaymentType;
+use App\Models\UserAddress;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -24,7 +25,8 @@ class DatabaseSeeder extends Seeder
             ValueSeeder::class,
             ProductSeeder::class,
             DeliveryMethodSeeder::class,
-            PaymentTypeSeeder::class
+            PaymentTypeSeeder::class,
+            UserAddressSeeder::class,
        ]);
     }
 }
