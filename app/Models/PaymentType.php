@@ -9,16 +9,15 @@ use Spatie\Translatable\HasTranslations;
 
 class PaymentType extends Model
 {
-    use HasFactory,HasTranslations;
+    use HasFactory, HasTranslations;
 
     protected $fillable = [
         'name'
     ];
     public array $translatable = ['name'];
 
-    public function orders():HasMany
+    public function orders(): HasMany
     {
         return $this->hasMany(Ordery::class);
     }
-
 }

@@ -17,7 +17,9 @@ return new class extends Migration
             $table->text('icon')->nullable();
             $table->integer('order')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
+
     }
 
     /**

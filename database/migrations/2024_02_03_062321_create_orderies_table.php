@@ -21,6 +21,8 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->json('products');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
